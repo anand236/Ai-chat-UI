@@ -27,11 +27,18 @@
               }
             ],
             "styles": [
+                "node_modules/@fortawesome/fontawesome-free/css/all.min.css",
               "src/styles.scss"
             ]
           },
           "configurations": {
             "production": {
+              "fileReplacements": [
+                {
+                  "replace": "./src//environment/environment.ts",
+                  "with": "./src/environment/environment.prod.ts"
+                }
+              ],
               "budgets": [
                 {
                   "type": "initial",
@@ -56,6 +63,9 @@
         },
         "serve": {
           "builder": "@angular/build:dev-server",
+          "options": {
+            "proxyConfig": "proxy.config.json"
+          },
           "configurations": {
             "production": {
               "buildTarget": "ai-application-ui:build:production"
@@ -64,6 +74,7 @@
               "buildTarget": "ai-application-ui:build:development"
             }
           },
+
           "defaultConfiguration": "development"
         },
         "extract-i18n": {

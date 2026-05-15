@@ -1,0 +1,33 @@
+<div class="chat-container">
+
+  <!-- <div class="chat-sidebar">
+    <div>Sidebar</div>
+  </div> -->
+
+  <div class="chat-data-with-field">
+    <div class="chat-data">
+      @for(item of chatHistoryData(); track item){
+      <div [class]="item.user == 'user' ?'user-chat':'resp-chat'">
+        <div [class]="item.user == 'user' ?'user-chat-div':'resp-chat-div'" [innerHTML]="item.res">
+        </div>
+      </div>
+      }
+    </div>
+
+    <div class="chat-input">
+      <div class="chat-field">
+        <div class="text-area">
+          <textarea #msg name="" id="" [formControl]="chatData" (input)="autoResize(msg)"
+            (keydown)="handleKeyDown($event)"></textarea>
+        </div>
+        <div>
+
+          <button><span><i class="fa-solid fa-microphone-lines"></i></span></button>
+          <button (click)="submit()"><span><i class="fa-solid fa-paper-plane"></i></span></button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>

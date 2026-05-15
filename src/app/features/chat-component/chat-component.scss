@@ -1,0 +1,146 @@
+.chat-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid rgb(36 9 9 / 25%);
+  // margin-top: 10px;
+  border-radius: 10px;
+  overflow-y: hidden;
+}
+
+.chat-sidebar {
+  width: 30%;
+  border-right: 1px solid rgb(36 9 9 / 25%);
+}
+
+.chat-data {
+  display: flex;
+  flex: 1 0 0;
+  flex-direction: column;
+  padding: 0px 15px;
+  overflow-y: auto;
+
+}
+
+.user-chat {
+  display: flex;
+  justify-content: end;
+}
+
+.chat-data-with-field {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+:host {
+  padding-top: 10px;
+  height: 100%;
+  min-height: 0;
+  display: block;
+  box-sizing: border-box;
+}
+
+.chat-input {
+  // height: 100px;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.resp-chat-div {
+  padding: 10px;
+  // background: chartreuse;
+  // border-radius: 13px;
+  // width: 75%;
+  margin: 10px;
+
+  background: #EEEDFE;
+  color: #3C3489;
+  padding: 8px 14px;
+  border-radius: 18px 18px 18px 4px; // bottom-left sharp — tail effect
+  max-width: 70%;
+  line-height: 1.5;
+  font-size: 14px;
+}
+
+.user-chat-div {
+  padding: 10px;
+  // background: gold;
+  // border-radius: 13px;
+  // width: 75%;
+  margin: 10px;
+
+  background: #7F77DD;
+  color: #ffffff;
+  padding: 8px 14px;
+  border-radius: 18px 18px 4px 18px; // bottom-right sharp — tail effect
+  max-width: 70%;
+  line-height: 1.5;
+  font-size: 14px;
+}
+
+input {
+  width: 20rem;
+  height: 34px;
+}
+
+.chat-field {
+  // align-items: center;
+  // justify-content: center;
+  // display: flex;
+  // background: rgb(36 9 9 / 30%);
+  // width: 90%;
+  // padding: 10px;
+  // border-radius: 35px;
+  // border: none;
+
+  align-items: center;
+  justify-content: end;
+  display: flex;
+  border: 1px solid rgba(36, 9, 9, 0.3);
+  width: 90%;
+  padding: 10px 18px;
+  border-radius: 35px;
+
+}
+
+button {
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  margin-right: 10px;
+  border: 1px solid rgb(36 9 9 / 25%);
+  background-color: white;
+  cursor: pointer;
+}
+
+// textarea {
+//   min-height: 20px !important;
+//   flex: 1;
+//   border: none;
+
+// }
+
+
+textarea {
+  min-height: 20px !important;
+  max-height: 150px; // ← yeh add kar
+  flex: 1;
+  border: none;
+  resize: none; // ← manual resize band karo
+  overflow-y: hidden; // default hidden, JS se auto hoga
+  width: 100%;
+  width: 95%;
+}
+
+.text-area {
+  flex: 1;
+}
+
+textarea:focus-visible {
+  outline: none;
+}
